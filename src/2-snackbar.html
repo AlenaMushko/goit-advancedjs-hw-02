@@ -4,14 +4,14 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Form</title>
+    <title>Snackbar</title>
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
     <header class="header">
       <div class="container">
         <nav class="nav">
-          <a href="./1-gallery.html" class="nav-link">Gallery</a>
+          <a href="./1-timer.html" class="nav-link">Timer</a>
           <a href="./2-snackbar.html" class="nav-link nav-link--active"
             >Snackbar</a
           >
@@ -19,7 +19,28 @@
       </div>
     </header>
     <main>
-      <div class="container"></div>
+      <div class="container">
+        <form class="form">
+          <label>
+            Delay (ms)
+            <input type="number" name="delay" required />
+          </label>
+
+          <fieldset>
+            <legend>State</legend>
+            <label>
+              <input type="radio" name="state" value="fulfilled" required />
+              Fulfilled
+            </label>
+            <label>
+              <input type="radio" name="state" value="rejected" required />
+              Rejected
+            </label>
+          </fieldset>
+
+          <button type="submit">Create notification</button>
+        </form>
+      </div>
     </main>
     <script type="module" src="./js/2-snackbar.js"></script>
   </body>
